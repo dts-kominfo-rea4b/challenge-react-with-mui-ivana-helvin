@@ -17,9 +17,9 @@ const Contact = ({ data }) => {
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             
-                {data.map((d) => (
+                {data.map((d, index) => (
                     <div>
-                    <ListItem alignItems="flex-start">
+                    <ListItem key={index} alignItems="flex-start">
                         <ListItemAvatar>
                             <Avatar alt="Remy Sharp" src={d.photo} />
                         </ListItemAvatar>

@@ -32,7 +32,9 @@ const App = () => {
           <ContactForm clickHandler={clickHandler} />
         </Grid>
         <Grid item xs>
-          <Contact data={contacts} />
+          {contacts.map((d) => (
+              <Contact data={d} />
+          ))}
         </Grid>
       </Grid>
     </div>

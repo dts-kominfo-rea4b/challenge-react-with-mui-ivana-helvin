@@ -15,30 +15,26 @@ import Avatar from '@mui/material/Avatar';
 const Contact = ({ data }) => {
     // Contact berisi foto, nama, telepon, dan email
     return (
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'backgroundata.paper' }}>
             
-                {data.map((d, index) => (
-                    <div>
-                    <ListItem key={index} alignItems="flex-start">
-                        <ListItemAvatar>
-                            <Avatar alt="Remy Sharp" src={d.photo} />
-                        </ListItemAvatar>
+            <ListItem alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Remy Sharp" src={data.photo} />
+                </ListItemAvatar>
 
-                        <ListItemText
-                            primary={d.name}
-                            secondary={
-                                <React.Fragment>
-                                    {d.phone}
-                                    <br></br>
-                                    {d.email}
-                                </React.Fragment>
-                            }
-                        />
-                    </ListItem>
+                <ListItemText
+                    primary={data.name}
+                    secondary={
+                        <React.Fragment>
+                            {data.phone}
+                            <br></br>
+                            {data.email}
+                        </React.Fragment>
+                    }
+                />
+            </ListItem>
 
-                    <Divider variant="inset" component="li" />
-                    </div>
-                ))}
+            <Divider variant="inset" component="li" />
                 
         </List>
     );
